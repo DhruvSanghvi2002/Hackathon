@@ -1,0 +1,8 @@
+pypdf
+langchain == 0.0.343
+langchain_community
+# os
+langchain_groq
+python-dotenv
+langchain_text_splitters
+streamlit

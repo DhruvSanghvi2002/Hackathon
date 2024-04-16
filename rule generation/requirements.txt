@@ -1,0 +1,8 @@
+pypdf
+langchain
+langchain_community
+# os
+langchain_groq
+python-dotenv
+langchain_text_splitters
+streamlit
