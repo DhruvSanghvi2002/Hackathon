@@ -1,0 +1,9 @@
+langchain 
+langchain-experimental 
+presidio-analyzer
+presidio-anonymizer
+spacy
+Faker
+faiss-cpu
+tiktoken
+streamlit
