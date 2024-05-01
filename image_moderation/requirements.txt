@@ -3,3 +3,4 @@ torch
 transformers
 langchain_groq
 pillow
+python-dotenv
