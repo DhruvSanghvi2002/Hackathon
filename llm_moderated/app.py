@@ -32,7 +32,7 @@ def main():
         if st.button("Generate rule without file"):
             result=chat_answer_when_moderation_policy_is_not_uploaded(user_question)
             # response = use_chat_prompt_for_chatting(result, user_question, memory) # Obtain response from conversation chain
-            st.markdown("User's Question:")
+            st.markdown("User's Article:")
             st.write(user_question) # Displays the user's question
             st.markdown("AI Assistant's Response:")
             

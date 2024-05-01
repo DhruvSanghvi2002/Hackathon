@@ -1,5 +1,5 @@
 pypdf
-langchain 
+langchain == 0.0.343
 langchain_community
 # os
 langchain_groq
