@@ -1,22 +1,22 @@
 version: '3'
 
 services:
-  llm_moderated:
-    build: ./llm_moderated
-    ports:
-      - "8000:8000"
+  # llm_moderated:
+  #   build: ./llm_moderated
+  #   ports:
+  #     - "8000:8000"
 
   llm_privacy:
     build: ./llm_privacy
     ports:
       - "8001:8001"
 
-  rule_generation:
-    build: ./rule_generation
-    ports:
-      - "8002:8002"
+  # rule_generation:
+  #   build: ./rule_generation
+  #   ports:
+  #     - "8002:8002"
   
-  image_moderation:
-    build: ./image_moderation
-    ports:
-      - "8003:8003"
+  # image_moderation:
+  #   build: ./image_moderation
+  #   ports:
+  #     - "8003:8003"
