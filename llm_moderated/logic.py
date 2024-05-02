@@ -32,7 +32,7 @@ def chat_answer_when_moderation_policy_is_uploaded(text,question):
   
 
   prompt_template = PromptTemplate.from_template(
-    "I will be providing you an article check if it follows the moderation policies provided in the form of list, the article is {question} and list is {text}")
+    "I will be providing you a question check if it follows the moderation policies provided in the form of list, if it does, answer{question} else say I cannot answer this question , the list is {text}, if the list doesnt contain any information about the moderation of question simply answer the {question}, please remember you dont have to answer question based on guidelines, you are free to answer the {question} from any knowledge you have")
   formatted_output=prompt_template.format(question=question,text=text)
   output=chat.invoke(formatted_output)
   return(output.content)
@@ -42,7 +42,8 @@ def chat_answer_when_moderation_policy_is_not_uploaded(question):
   question=question
   chat = ChatGroq(temperature=0, model_name="mixtral-8x7b-32768",groq_api_key=groq_api_key)
   prompt_template = PromptTemplate.from_template(
-    "I will give you an article  , check if it follows your guidelines , the article is {question}" )
+    "I will give you a question , check if this question follows your guidelines , if it follows it , answer the {question} else respond why it doesn't follow moderation policies"
+  )
   formatted_output=prompt_template.format(question=question)
   output=chat.invoke(formatted_output)
   print(output.content)
@@ -51,5 +52,7 @@ def chat_answer_when_moderation_policy_is_not_uploaded(question):
 
 chat_answer_when_moderation_policy_is_not_uploaded("How to top in an exam")
 
+
+  
 
   
